@@ -11,9 +11,9 @@ function gerador(){
         tab.innerHTML = ''
         if (n >= 0 || n <= 0){
             for (i = 1;i <= 10;i++){
-                var m = 0 * i
                 var item = document.createElement('option')
                 item.text = `${n} X ${i} = ${n*i}`
+                item.value = `tab${c}`
                 tab.appendChild(item)
                 tab.style.backgroundColor = '#68c8f2'
                 tab.style.borderRadius = '5px'
