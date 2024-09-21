@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício desafio</title>
+    <style>
+        body{
+            font: 18pt Arial;
+        }
+        div#resp{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Nacionalidade Brasileira!</h1>
+    Você é de que País? <input type="text" name="txpais" id="txpais">
+    <input type="button" value="Analisar" onclick="analisando()">
+
+    <div id="resp">
+
+    </div>
+
+    <script>
+        function analisando(){
+            var txp = window.document.querySelector('input#txpais')
+            var resp = window.document.querySelector('div#resp')
+            
+            var local = (txp.value)
+
+            resp.innerHTML = `<p>Sua localidade de nascimento é <strong>${local}</strong>.</p>`
+            if (local == 'Brasil'){
+                resp.innerHTML += 'Sua nacionalidade é <strong>Brasileira!</strong>'
+            }else{
+                resp.innerHTML += 'Você é de nacionalidade <strong>estrangeira!</strong>'
+            }
+        }
+    </script>
+</body>
+</html>

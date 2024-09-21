@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios Letras</title>
+    <style>
+        body{
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            text-align: center;
+            font-size: 4rem;
+        }
+    </style>
+</head>
+<body>
+    <h1> S u a</h1>
+
+    <script>
+        function typeWriter(elemento){
+            const textoArray = elemento.innerHTML.split('')
+            elemento.innerHTML = ''
+            textoArray.forEach((letra,i) => {setTimeout(function(){elemento.innerHTML += letra}, 600 * i)})
+        }
+
+        const titulo = document.querySelector('h1')
+        typeWriter(titulo)
+    </script>
+</body>
+</html>

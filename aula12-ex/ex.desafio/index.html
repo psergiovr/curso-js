@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escala</title>
+    <link rel="stylesheet" href="estilos/style.css">
+</head>
+<body>
+    <h1>Escala de Turno</h1>
+    
+    <div id="item">
+        <p id="itens">
+            <label for="letraA">Letra A</label><input type="radio" name="letra" id="letraA" checked>
+
+            <label for="letraB">Letra B</label><input type="radio" name="letra" id="letraB">
+
+            <label for="letraC">Letra C</label><input type="radio" name="letra" id="letraC">
+
+            <label for="letraD">Letra D</label><input type="radio" name="letra" id="letraD">
+            
+            <label for="letraE">Letra E</label><input type="radio" name="letra" id="letraE">
+        </p>
+        <p>
+            Mês: <input type="number" name="txmes" id="mes" min="0">
+            <input type="button" value="Turno" onclick="clicar()">
+            <input type="button" value="Folga" onclick="folga()">
+        </p>
+        
+        <div id="res">
+           
+        </div>
+    </div>
+    
+    <script src="scriptdesafio.js">
+
+    </script>
+</body>
+</html>

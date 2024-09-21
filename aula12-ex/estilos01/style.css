@@ -1,0 +1,51 @@
+@charset "UTF-8";
+*{
+    margin: 0px;
+}    
+
+body{
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    background-color: aqua;
+    color: white;
+}
+header{
+    text-align: center;
+    padding: 20px;
+    text-shadow: 1px 1px 2px black;
+}
+div#item{
+    background-color: white;
+    font-size: 16px;
+    color: black;
+    padding: 10px;
+    width: 350px;
+    margin: auto;
+    text-shadow: 1px 1px 3px black;
+    border-radius: 10px 10px 0px 0px;
+    box-shadow: 2px 2px 4px black;
+}
+input{
+    margin: 10px;
+}
+div#item01{
+    
+    background-color: white;
+    color: black;
+    padding: 10px;
+    width: 350px;
+    margin: auto;
+    text-shadow: 1px 1px 3px black;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 2px 2px 4px black;
+}
+
+#imag{
+    margin: 10px;
+    border-radius: 10px;
+    
+}
+footer{
+    text-align: center;
+    text-shadow: 1px 1px 2px black;
+    padding: 10px;
+}

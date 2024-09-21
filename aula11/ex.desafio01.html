@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício desafio CNH</title>
+    <style>
+        body{
+            font: 18pt Arial;
+        }
+        div#resp{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Carteira de Habilitação!</h1>
+    Digite o ano de nascmento: <input type="number" name="txano" id="txano"><br>
+    Digite o ano atual: <input type="number" name="texanat" id="texanat">
+    <input type="button" value="Analisar" onclick="analisando()">
+
+    <div id="resp">
+
+    </div>
+
+    <script>
+        function analisando(){
+            var txan = window.document.querySelector('input#txano')
+            var txat = window.document.querySelector('input#texanat')
+            var resp = window.document.querySelector('div#resp')
+            
+            var veid = Number(txan.value)
+            var veida = Number(txat.value)
+
+            var valdid = veida - veid
+
+            resp.innerHTML = `<p>Sua idade no momento é <strong>${valdid}</strong> anos.</p>`
+            
+            if (valdid >= 18){
+                resp.innerHTML += 'Você está habito a tirar sua <strong>Carteira de Habilitação!</strong>'
+            }else{
+                var falta = 18 - valdid 
+            
+                resp.innerHTML += `<p>Você não está habito para retirar sua Carteira de Habilitação!</p> E faltam ${falta} anos, para você completar 18 anos.`
+            }
+        }
+    </script>
+</body>
+</html>

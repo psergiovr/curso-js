@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício desafio ETE</title>
+    <style>
+        body{
+            font: 18pt Arial;
+        }
+        div#resp{
+            margin-top: 20px;
+        }
+        input#txvazao1, #txvazao2, #txvazao3, #txvazao4{
+            width: 100px;
+        }
+        input#txvazao5, #txvazao6, #txvazao7, #txvazao8{
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Vazões</h1>
+    Digite a primeira vazão: <input type="number" name="txvazao1" id="txvazao1"><br>
+    Digite a segunda vazão: <input type="number" name="txvazao2" id="txvazao2"><br>
+    Digite a terceira vazão: <input type="number" name="txvazao3" id="txvazao3"><br>
+    Digite a quarta vazão: <input type="number" name="txvazao4" id="txvazao4"><br>
+    Digite a quinta vazão: <input type="number" name="txvazao5" id="txvazao5"><br>
+    Digite a sexta vazão: <input type="number" name="txvazao6" id="txvazao6"><br>
+    Digite a sétima vazão: <input type="number" name="txvazao7" id="txvazao7"><br>
+    Digite a oitava vazão: <input type="number" name="txvazao8" id="txvazao8">
+    
+    <input type="button" value="media" onclick="calcular()">
+
+    <div id="resp">
+
+    </div>
+
+    <script>
+        function calcular(){
+            var txva1 = window.document.querySelector('input#txvazao1')
+            var txva2 = window.document.querySelector('input#txvazao2')
+            var txva3 = window.document.querySelector('input#txvazao3')
+            var txva4 = window.document.querySelector('input#txvazao4')
+            var txva5 = window.document.querySelector('input#txvazao5')
+            var txva6 = window.document.querySelector('input#txvazao6')
+            var txva7 = window.document.querySelector('input#txvazao7')
+            var txva8 = window.document.querySelector('input#txvazao8')
+            
+            var vaz1 = Number(txva1.value)
+            var vaz2 = Number(txva2.value)
+            var vaz3 = Number(txva3.value)
+            var vaz4 = Number(txva4.value)
+            var vaz5 = Number(txva5.value)
+            var vaz6 = Number(txva6.value)
+            var vaz7 = Number(txva7.value)
+            var vaz8 = Number(txva8.value)
+
+            var media = (vaz1 + vaz2 + vaz3 + vaz4 + vaz5 + vaz6 + vaz7 + vaz8)/8
+            var soma = vaz1 + vaz2 + vaz3 + vaz4 + vaz5 + vaz6 + vaz7 + vaz8
+            
+            resp.innerHTML = `<p>A vazão <strong>${vaz1} + ${vaz2} + ${vaz3} + ${vaz4} + ${vaz5} + ${vaz6} + ${vaz7} + ${vaz8} = ${soma};</strong> a média é <strong>${media}.</p>`
+        }
+    </script>
+</body>
+</html>
