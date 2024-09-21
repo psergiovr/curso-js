@@ -25,7 +25,6 @@ div#res{
     padding: 1px;
     text-align: center;
     width: 15vw;
-    margin: auto;
     border-radius: 20px;
 }
 footer{
@@ -33,10 +32,10 @@ footer{
 }
 select#itab{
     padding: 5px;
-    width: 15vw;
+    width: 50vw;
     font-weight: bolder;
     letter-spacing: 2px;
     font-size: 16px;
     border-radius: 5px;
-    color: white;
+    color: black;
 }
