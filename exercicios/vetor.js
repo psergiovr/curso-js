@@ -7,14 +7,13 @@ function vetor(){
         window.alert('[ERRO!] Digite [1] no quadrado valor!')
     }else{
         valor = Number(valor.value)
-        if (valor == 1){
-        var valor = [2,4,5,8,10]
+        if (valor%2==0){
+                return('Par')
+            }else{
+                return('Impar')
+            }
         var item = document.createElement('option')
         item.text = `${valor}`
         visor.appendChild(item)
-        
-        }
     }
-
-    
 }
