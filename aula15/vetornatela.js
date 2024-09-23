@@ -7,13 +7,15 @@ for (let valor = 0;valor < valores.length;valor++){
 }*/
 
 let valores = [8,7,4,2,9]
+
 valores.sort()
+valores.push(15)
 console.log(valores)
 
-for (let valor in valores){
-    console.log(`A posição ${valor} tem o valor ${valores[valor]}`)
+for (let pos in valores){
+    console.log(`A posição ${pos} tem o valor ${valores[pos]}`)
 }
-var n = 9
+var n = 7
 let pos = valores.indexOf(n)
 
 if (pos == -1){

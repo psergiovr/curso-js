@@ -9,9 +9,8 @@ function clicar(){
     var mesA = mesA + 1
 
     if (mes.value.length == 0 || mesA != Number(mes.value)){
-        window.alert('[ERRO] Verifique os dados e tente novamente!')
+        window.alert('[ERRO] Favor digite o número do mês vigente!')
     }else{
-        var mes = (mes.value)
         var res = document.getElementById('res')
     
         var img = document.createElement('img')
