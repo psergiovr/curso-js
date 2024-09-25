@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inspeção diária</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <p>Nome: <input type="text" name="nome" id="inome"></p>
+        
+        <p>Matricula: <input type="number" name="mat" id="imat"></p>
+
+        <p>Horário: (7h ás 15h <input type="radio" name="hora" id="ihora" checked>)
+                    (15h ás 23h <input type="radio" name="hora" id="ihora1">)
+                    (23h ás 7h <input type="radio" name="hora" id="ihora2">)
+        </p>
+
+        <p>Tempo: (Bom <input type="radio" name="tempo" id="itempo" checked>)
+                  (Chuva <input type="radio" name="tempo" id="ichuva">)
+                  (Chuva Forte <input type="radio" name="tempo" id="ichforte">)
+        </p>
+
+        <p id="vazao">7:00 - <input type="number" name="num" id="inum">
+                      8:00 - <input type="number" name="num" id="inum00">
+                      9:00 - <input type="number" name="num" id="inum01">
+                      10:00 - <input type="number" name="num" id="inum02">
+                      11:00 - <input type="number" name="num" id="inum03">
+                      12:00 - <input type="number" name="num" id="inum04">
+                      13:00 - <input type="number" name="num" id="inum05">
+                      14:00 - <input type="number" name="num" id="inum06">
+        </p>
+
+        <input type="button" name="valid" id="ivalid" value="Validar" onclick="validar()">
+
+        <div id="res">
+            Respostas
+        </div>
+
+        <p>Equipamento:
+            Grade Escalar / Em operação (<input type="radio" name="grade" id="igrade">M)
+            (<input type="radio" name="grade" id="gradea" checked>A)
+        </p>
+
+        <p id="equip">Bombas da elevatória / Em operação (<input type="radio" name="bomba" id="ibomba"checked>Bomba 01)
+        (<input type="radio" name="bomba" id="ibomba02">Bomba 02)
+        (<input type="radio" name="bomba" id="ibomba03">Bomba 03)
+        >>> Corrente Motor - <input type="number" name="tex" id="itex">
+        </p>
+        
+        <input type="button" name="valid01" id="ivalid01" value="Equipamento" onclick="equipamento()">
+    </div>
+    
+    <div id="res01">
+        respostas 01
+    </div>
+    <script src="form.js"></script>
+</body>
+</html>
