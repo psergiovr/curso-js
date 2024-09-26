@@ -40,19 +40,44 @@ function validar(){
         var ano = data.getFullYear()
         
         if (tur[0].checked && temp[0].checked){
-            turno = '7h às 15'
+            turno = '7h às 15h'
             temp[0].checked = tempo = 'Bom'
             res.innerHTML = `Nome: ${nome}, Matrícula: ${mat}, Função: ${func}<p> Dia: ${dia} ${mes} ${ano}, Turno: ${turno}, tempo: ${tempo}</p><p> Vazão Média: ${vazaom}.</p>`
         }else if(tur[0].checked && temp[1].checked){
-            turno = '7h às 15'
+            turno = '7h às 15h'
             temp[1].checked = tempo = 'Chuva'
-            res.innerHTML = `Nome: ${nome}, Matrícula: ${mat}, Função: ${func}; Dia: ${dia} ${mes} ${ano}, Turno: ${turno}, tempo: ${tempo}`
+            res.innerHTML = `Nome: ${nome}, Matrícula: ${mat}, Função: ${func}<p> Dia: ${dia} ${mes} ${ano}, Turno: ${turno}, tempo: ${tempo}</p><p> Vazão Média: ${vazaom}.</p>`
         }else if(tur[0].checked && temp[2].checked){
-            turno = '7h às 15'
-            temp[1].checked = tempo = 'Chuva Forte'
-            res.innerHTML = `Nome: ${nome}, Matrícula: ${mat}, Função: ${func}; Dia: ${dia} ${mes} ${ano}, Turno: ${turno}, tempo: ${tempo}; Grade Escalar: ${grade}`
+            turno = '7h às 15h'
+            temp[2].checked = tempo = 'Chuva Forte'
+            res.innerHTML = `Nome: ${nome}, Matrícula: ${mat}, Função: ${func}<p> Dia: ${dia} ${mes} ${ano}, Turno: ${turno}, tempo: ${tempo}</p><p> Vazão Média: ${vazaom}.</p>`
         }
-        
+        if (tur[1].checked && temp[0].checked){
+            turno = '15h às 23h'
+            temp[0].checked = tempo = 'Bom'
+            res.innerHTML = `Nome: ${nome}, Matrícula: ${mat}, Função: ${func}<p> Dia: ${dia} ${mes} ${ano}, Turno: ${turno}, tempo: ${tempo}</p><p> Vazão Média: ${vazaom}.</p>`
+        }else if(tur[1].checked && temp[1].checked){
+            turno = '15h às 23h'
+            temp[1].checked = tempo = 'Chuva'
+            res.innerHTML = `Nome: ${nome}, Matrícula: ${mat}, Função: ${func}<p> Dia: ${dia} ${mes} ${ano}, Turno: ${turno}, tempo: ${tempo}</p><p> Vazão Média: ${vazaom}.</p>`
+        }else if(tur[1].checked && temp[2].checked){
+            turno = '15h às 23h'
+            temp[2].checked = tempo = 'Chuva Forte'
+            res.innerHTML = `Nome: ${nome}, Matrícula: ${mat}, Função: ${func}<p> Dia: ${dia} ${mes} ${ano}, Turno: ${turno}, tempo: ${tempo}</p><p> Vazão Média: ${vazaom}.</p>`
+        }
+        if (tur[2].checked && temp[0].checked){
+            turno = '23h às 7h'
+            temp[0].checked = tempo = 'Bom'
+            res.innerHTML = `Nome: ${nome}, Matrícula: ${mat}, Função: ${func}<p> Dia: ${dia} ${mes} ${ano}, Turno: ${turno}, tempo: ${tempo}</p><p> Vazão Média: ${vazaom}.</p>`
+        }else if(tur[2].checked && temp[1].checked){
+            turno = '23h às 7h'
+            temp[1].checked = tempo = 'Chuva'
+            res.innerHTML = `Nome: ${nome}, Matrícula: ${mat}, Função: ${func}<p> Dia: ${dia} ${mes} ${ano}, Turno: ${turno}, tempo: ${tempo}</p><p> Vazão Média: ${vazaom}.</p>`
+        }else if(tur[2].checked && temp[2].checked){
+            turno = '23h às 7h'
+            temp[2].checked = tempo = 'Chuva Forte'
+            res.innerHTML = `Nome: ${nome}, Matrícula: ${mat}, Função: ${func}<p> Dia: ${dia} ${mes} ${ano}, Turno: ${turno}, tempo: ${tempo}</p><p> Vazão Média: ${vazaom}.</p>`
+        }
     }
 }
 function equipamento(){
