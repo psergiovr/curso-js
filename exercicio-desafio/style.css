@@ -20,3 +20,6 @@ p#equip{
 input#ivalid01{
     margin-bottom: 20px;
 }
+input#icorrmot{
+    width: 80px;
+}

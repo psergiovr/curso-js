@@ -82,6 +82,7 @@ function validar(){
 }
 function equipamento(){
     cm = document.querySelector('input#itex')
+    cm01 = document.querySelector('input#icorrmot')
 
     if (cm.value == 0){
         window.alert('[ERRO!] Favor verifique os dados!')
@@ -89,40 +90,45 @@ function equipamento(){
         grad = document.getElementsByName('grade')
         res01 = document.querySelector('div#res01')
         bomb = document.getElementsByName('bomba')
+        bpre = document.getElementsByName('bpre')
         desar = document.getElementsByName('desar')
         cm = Number(cm.value)
+        cm01 = Number(cm01.value)
 
-        if(grad[1].checked && bomb[0].checked && desar[0].checked){
+        if(grad[1].checked && bomb[0].checked && desar[0].checked && bpre[0].checked){
             desar[0] = desare = '#01'
             grad[1].checked = grade = 'Automático'
             bomb[0] = bomba = '#01'
-            res01.innerHTML = `Grade Escalar: ${grade}, Bomba: ${bomba} >> Amperagem: ${cm}<p>Desarenador: ${desare} >> ${grade}</p> `
-        }else if(grad[1].checked && bomb[1].checked && desar[0].checked){
+            bpre[0] = bombpre = '#01'
+            res01.innerHTML = `Grade Escalar: ${grade}, Bomba Elevatória: ${bomba} >> Amperagem: ${cm}<p>Desarenador: ${desare} >> ${grade}</p><p>Bomba pré-aeração: ${bombpre} >> Amperagem: ${cm01} </p> `
+        }else if(grad[1].checked && bomb[1].checked && desar[0].checked && bpre[1].checked){
             desar[0] = desare = '#01'
             bomb[1] = bomba = '#02'
             grad[1].checked = grade = 'Automático'
-            res01.innerHTML = `Grade Escalar: ${grade}, Bomba: ${bomba} >> Amperagem: ${cm}<p>Desarenador: ${desare} >> ${grade}</p> `
-        }else if(grad[1].checked && bomb[2].checked && desar[0].checked){
+            bpre[1].checked = bombpre = '#02'
+            res01.innerHTML = `Grade Escalar: ${grade}, Bomba Elevatória: ${bomba} >> Amperagem: ${cm}<p>Desarenador: ${desare} >> ${grade}</p><p>Bomba pré-aeração: ${bombpre} >> Amperagem: ${cm01} </p> `
+        }else if(grad[1].checked && bomb[2].checked && desar[0].checked && bpre[2].checked){
             desar[0] = desare = '#01'
             bomb[2] = bomba = '#03'
+            bpre[2] = bombpre = '#03'
             grad[1].checked = grade = 'Automático'
-            res01.innerHTML = `Grade Escalar: ${grade}, Bomba: ${bomba} >> Amperagem: ${cm}<p>Desarenador: ${desare} >> ${grade}</p> `
+            res01.innerHTML = `Grade Escalar: ${grade}, Bomba Elevatória: ${bomba} >> Amperagem: ${cm}<p>Desarenador: ${desare} >> ${grade}</p><p>Bomba pré-aeração: ${bombpre} >> Amperagem: ${cm01} </p> `
         }
         if(grad[1].checked && bomb[0].checked && desar[1].checked){
             desar[0] = desare = '#02'
             grad[1].checked = grade = 'Automático'
             bomb[0] = bomba = '#01'
-            res01.innerHTML = `Grade Escalar: ${grade}, Bomba: ${bomba} >> Amperagem: ${cm}<p>Desarenador: ${desare} >> ${grade}</p> `
+            res01.innerHTML = `Grade Escalar: ${grade}, Bomba Elevatória: ${bomba} >> Amperagem: ${cm}<p>Desarenador: ${desare} >> ${grade}</p> `
         }else if(grad[1].checked && bomb[1].checked && desar[1].checked){
             desar[0] = desare = '#02'
             bomb[1] = bomba = '#02'
             grad[1].checked = grade = 'Automático'
-            res01.innerHTML = `Grade Escalar: ${grade}, Bomba: ${bomba} >> Amperagem: ${cm}<p>Desarenador: ${desare} >> ${grade}</p> `
+            res01.innerHTML = `Grade Escalar: ${grade}, Bomba Elevatória: ${bomba} >> Amperagem: ${cm}<p>Desarenador: ${desare} >> ${grade}</p> `
         }else if(grad[1].checked && bomb[2].checked && desar[1].checked){
             desar[0] = desare = '#02'
             bomb[2] = bomba = '#03'
             grad[1].checked = grade = 'Automático'
-            res01.innerHTML = `Grade Escalar: ${grade}, Bomba: ${bomba} >> Amperagem: ${cm}<p>Desarenador: ${desare} >> ${grade}</p> `
+            res01.innerHTML = `Grade Escalar: ${grade}, Bomba Elevatória: ${bomba} >> Amperagem: ${cm}<p>Desarenador: ${desare} >> ${grade}</p> `
         }
     }
 }
