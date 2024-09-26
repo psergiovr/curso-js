@@ -64,12 +64,40 @@ function equipamento(){
         grad = document.getElementsByName('grade')
         res01 = document.querySelector('div#res01')
         bomb = document.getElementsByName('bomba')
+        desar = document.getElementsByName('desar')
         cm = Number(cm.value)
 
-        if(grad[1].checked && bomb[0].checked){
+        if(grad[1].checked && bomb[0].checked && desar[0].checked){
+            desar[0] = desare = '#01'
             grad[1].checked = grade = 'Automático'
             bomb[0] = bomba = '#01'
-            res01.innerHTML = `Grade Escalar: ${grade}, Bomba: ${bomba} >> Amperagem: ${cm} `
+            res01.innerHTML = `Grade Escalar: ${grade}, Bomba: ${bomba} >> Amperagem: ${cm}<p>Desarenador: ${desare} >> ${grade}</p> `
+        }else if(grad[1].checked && bomb[1].checked && desar[0].checked){
+            desar[0] = desare = '#01'
+            bomb[1] = bomba = '#02'
+            grad[1].checked = grade = 'Automático'
+            res01.innerHTML = `Grade Escalar: ${grade}, Bomba: ${bomba} >> Amperagem: ${cm}<p>Desarenador: ${desare} >> ${grade}</p> `
+        }else if(grad[1].checked && bomb[2].checked && desar[0].checked){
+            desar[0] = desare = '#01'
+            bomb[2] = bomba = '#03'
+            grad[1].checked = grade = 'Automático'
+            res01.innerHTML = `Grade Escalar: ${grade}, Bomba: ${bomba} >> Amperagem: ${cm}<p>Desarenador: ${desare} >> ${grade}</p> `
+        }
+        if(grad[1].checked && bomb[0].checked && desar[1].checked){
+            desar[0] = desare = '#02'
+            grad[1].checked = grade = 'Automático'
+            bomb[0] = bomba = '#01'
+            res01.innerHTML = `Grade Escalar: ${grade}, Bomba: ${bomba} >> Amperagem: ${cm}<p>Desarenador: ${desare} >> ${grade}</p> `
+        }else if(grad[1].checked && bomb[1].checked && desar[1].checked){
+            desar[0] = desare = '#02'
+            bomb[1] = bomba = '#02'
+            grad[1].checked = grade = 'Automático'
+            res01.innerHTML = `Grade Escalar: ${grade}, Bomba: ${bomba} >> Amperagem: ${cm}<p>Desarenador: ${desare} >> ${grade}</p> `
+        }else if(grad[1].checked && bomb[2].checked && desar[1].checked){
+            desar[0] = desare = '#02'
+            bomb[2] = bomba = '#03'
+            grad[1].checked = grade = 'Automático'
+            res01.innerHTML = `Grade Escalar: ${grade}, Bomba: ${bomba} >> Amperagem: ${cm}<p>Desarenador: ${desare} >> ${grade}</p> `
         }
     }
 }
