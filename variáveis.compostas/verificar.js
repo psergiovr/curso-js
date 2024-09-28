@@ -9,11 +9,18 @@ function nalista(num,lis){
         return false
     }
 }
+function numAdicio(num){
+    if(Number(num) == 0){
+        return true
+    }else{
+        return false
+    }
+}
 
 function adicionar(){
      
-    if(num.value.length == 0 || nalista(num.value, valor)){
-        window.alert('[ERRO!] Verifique os dados!')
+    if(numAdicio(num.value) || nalista(num.value, valor)){
+        window.alert('[ERRO!] Número inválido, ou já encontado na lista. Verifique os dados!')
     }
     else{
         valor.push(Number(num.value)) 
@@ -34,10 +41,12 @@ function verificando(){
     else {
         let soma = 0
         let media = 0
+        
         for(let pos in valor){
             soma += valor[pos]
         }
         media = soma/valor.length
+        
         res.innerHTML = ``
         res.innerHTML = `<p>A soma de todos os valores é igual a: ${soma}</p>`
         res.innerHTML += `<p>Ao todo temos ${valor.length} números cadastrados.</p>`
